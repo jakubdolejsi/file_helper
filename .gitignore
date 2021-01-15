@@ -1,0 +1,10 @@
+
+.idea/.gitignore
+.idea/file_helper.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+__pycache__/
+tests/
+venv/
