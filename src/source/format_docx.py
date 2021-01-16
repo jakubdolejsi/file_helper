@@ -4,5 +4,5 @@ from src.source.source_type import SourceType
 
 class FormatDocx(SourceType):
 
-    def convert(self, dest_type: DestinationType):
+    def convert_to(self, dest_format: DestinationType):
         pass

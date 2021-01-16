@@ -8,6 +8,16 @@ class Configuration(object):
     def __init__(self, args: Namespace):
         self.__source = args.source
         self.__destination = args.destination
+        self.__extension = None
+        self.validate()
+
+    @property
+    def extension(self):
+        return self.__extension
+
+    @extension.setter
+    def extension(self, e):
+        self.__extension = e
 
     @property
     def source(self):
@@ -34,3 +44,6 @@ class Configuration(object):
 
     def default_destination(self):
         self.__destination = os.getcwd()
+
+    def __load_files(self):
+        pptxs = [a for a in os.listdir(os.path.join(self.__source)) if a.endswith(".pptx")]
